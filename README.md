@@ -13,6 +13,8 @@ Contact Plus is a Flutter application designed to manage contacts efficiently. T
 
 ![Shot (1)](https://github.com/PrincePatel027/contact_plus/assets/149999800/a473905b-3e31-42de-8780-5fb5a474d2a5)
 
+https://github.com/PrincePatel027/contact_plus/assets/149999800/a1bc874e-e81a-405d-95c4-2556af8f49ad
+
 ## Directory Structure
 
     lib
