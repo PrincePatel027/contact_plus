@@ -9,6 +9,11 @@ Contact Plus is a Flutter application designed to manage contacts efficiently. T
 - **Provider**: Uses the Provider package for state management.
 - **Screens**: Multiple screens to navigate through different parts of the application.
 
+## Photos & Videos
+
+
+
+
 ## Directory Structure
 
     lib
