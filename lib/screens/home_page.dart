@@ -73,26 +73,7 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(18.0),
-              child: TextField(
-                onChanged: (value) {
-                  Provider.of<StepperProvider>(context, listen: false)
-                      .contacts
-                      .map(
-                        (e) => e['name']!.toLowerCase() == value.toLowerCase(),
-                      );
-                },
-                decoration: const InputDecoration(
-                  contentPadding:
-                      EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-                  border: OutlineInputBorder(),
-                  hintText: "Search Contacts",
-                  suffixIcon: Icon(Icons.search),
-                ),
-              ),
-            ),
-            phone_contact_selector(context),
+            PhoneContactSelector(),
           ],
         ),
       ),
