@@ -70,11 +70,10 @@ class _StepperDialogState extends State<StepperDialog> {
               Step(
                 title: const Text('Contact Number'),
                 content: TextFormField(
+                  maxLength: 10,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
                       return 'Please enter a contact number';
-                    } else if (value.length != 10) {
-                      return 'Contact number must be 10 digits';
                     }
                     return null;
                   },
@@ -91,10 +90,7 @@ class _StepperDialogState extends State<StepperDialog> {
                 content: TextFormField(
                   validator: (value) {
                     if (value != null && value.isNotEmpty) {
-                      final regex = RegExp(r'^[^@]+@[^@]+\.[^@]+');
-                      if (!regex.hasMatch(value)) {
-                        return 'Please enter a valid email address';
-                      }
+                      return 'Please enter a valid email address';
                     }
                     return null;
                   },

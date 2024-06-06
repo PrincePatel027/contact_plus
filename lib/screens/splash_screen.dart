@@ -23,7 +23,6 @@ class _SplashState extends State<Splash> {
     final stepperProvider =
         Provider.of<StepperProvider>(context, listen: false);
     await stepperProvider.initialize();
-    // ignore: use_build_context_synchronously
     Navigator.pushReplacementNamed(context, '/');
   }
 

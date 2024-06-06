@@ -74,7 +74,6 @@
 //     emailController.clear();
 //   }
 // }
-
 import 'package:contact_plus/model/contact_details.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -152,11 +151,16 @@ class StepperProvider extends ChangeNotifier {
     final hiddenContactsString = prefs.getString('hiddenContacts');
 
     if (contactsString != null) {
-      contacts = List<Map<String, String>>.from(jsonDecode(contactsString));
+      contacts = List<Map<String, String>>.from(
+        jsonDecode(contactsString).map(
+          (contact) => Map<String, String>.from(contact),
+        ),
+      );
     }
     if (hiddenContactsString != null) {
-      hiddenContacts =
-          List<Map<String, String>>.from(jsonDecode(hiddenContactsString));
+      hiddenContacts = List<Map<String, String>>.from(
+          jsonDecode(hiddenContactsString)
+              .map((contact) => Map<String, String>.from(contact)));
     }
   }
 }

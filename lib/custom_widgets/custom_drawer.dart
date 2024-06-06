@@ -34,7 +34,7 @@ class CustomDrawer extends StatelessWidget {
             decoration: BoxDecoration(
               color: Colors.blue,
             ),
-            child: Text('Drawer Header'),
+            child: Text('Contact Plus'),
           ),
           ListTile(
             title: const Text('Hide Contacts'),
