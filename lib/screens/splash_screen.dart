@@ -16,13 +16,17 @@ class _SplashState extends State<Splash> {
   @override
   void initState() {
     super.initState();
-    _initializeApp();
+
+    Timer(const Duration(seconds: 3), () {
+      _initializeApp();
+    });
   }
 
   Future<void> _initializeApp() async {
     final stepperProvider =
         Provider.of<StepperProvider>(context, listen: false);
     await stepperProvider.initialize();
+    // ignore: use_build_context_synchronously
     Navigator.pushReplacementNamed(context, '/');
   }
 
@@ -35,6 +39,7 @@ class _SplashState extends State<Splash> {
         decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage("assets/images/background_light.png"),
+            fit: BoxFit.cover,
           ),
         ),
         child: Column(

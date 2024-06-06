@@ -31,6 +31,8 @@
 //   }
 
 //   void save() {
+//     // ignore: prefer_typing_uninitialized_variables
+//     var contactDetails;
 //     contactDetails.name = nameController.text;
 //     contactDetails.contactNum = _number;
 //     contactDetails.email = emailController.text;
